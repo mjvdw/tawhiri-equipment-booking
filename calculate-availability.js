@@ -30,7 +30,7 @@ let quantityAvailable = totalEquipment - quantityUsed;
 // Update the availability field.
 if (quantityAvailable !== NaN) {
   updateAvailabilityCheckField(newBookingId, (
-    quantityAvailable <= newBooking[0]["Quantity"] ? 
+    quantityAvailable < newBooking[0]["Quantity"] ? 
     `Insufficient Availability (${quantityAvailable})` : 
     `Available (${quantityAvailable})`)
   );
